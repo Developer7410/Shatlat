@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shatlat</title>
+    <!--======Bootstrap CDN=========-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <!--======Custom CSS =========-->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--======jQuery CDN=========-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    
+    <!--======Google Fonts CDN=========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!--======Font Awsome CDN=========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--======Bootstrap CDN=========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+    <!--======AOS LIBRARY CDN=========-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+<style>
+         	span {cursor:pointer; }
+
+.minus, .plus{
+width:25px;
+height:25px;
+background:#f2f2f2;
+border-radius:4px;
+/* padding:8px 5px 8px 5px; */
+border:1px solid #ddd;
+display: inline-block;
+vertical-align: middle;
+text-align: center;
+}
+input{
+height:34px;
+width: 40px;
+text-align: center;
+font-size: 17px;
+border:1px solid #ddd;
+border-radius:4px;
+display: inline-block;
+vertical-align: middle;
+}
+@media (max-width:576px) and (min-width:300px){
+  .minus, .plus{
+width:20px;
+height:25px;
+background:#f2f2f2;
+border-radius:4px;
+/* padding:8px 5px 8px 5px; */
+border:1px solid #ddd;
+display: inline-block;
+vertical-align: middle;
+text-align: center;
+}
+input{
+height:25px;
+width: 25px;
+text-align: center;
+font-size: 11px;
+border:1px solid #ddd;
+border-radius:3px;
+display: inline-block;
+vertical-align: middle;
+}
+}
+</style>
+<script>
+  $(document).ready(function() {
+$('.minus').click(function () {
+var $input = $(this).parent().find('input');
+var count = parseInt($input.val()) - 1;
+count = count < 1 ? 1 : count;
+$input.val(count);
+$input.change();
+return false;
+});
+$('.plus').click(function () {
+var $input = $(this).parent().find('input');
+$input.val(parseInt($input.val()) + 1);
+$input.change();
+return false;
+});
+});
+</script>
+</head>
+<body>
+    
+<!--======HEADER SECTION=========-->
+
+<!--======TOP BAR SECTION=========-->
+<section class="top-bar d-lg-block d-none" style="background-color: #01886237; backdrop-filter: blur(55px);">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-12 pt-1">
+                <div class="topbar-data align-items-center d-flex justify-content-end pt-1">
+                    <p class="pe-3 top-text">+966558976788</p>
+                    <p class="top-text pe-4">support@shatlat.sa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--======NAVBAR SECTION=========-->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"> <img src="images/logo.png" class="img-fluid logo-img" alt=""> </a>
+    <div class="topbar-data align-items-center d-flex justify-content-center pt-md-3 pt-sm-3 pt-3 d-lg-none d-block">
+      <p class=" top-text pe-sm-2 ">+966558976788</p>
+      <p class="top-text ps-sm-2 ps-2">support@shatlat.sa</p>
+  </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+        <li class="nav-item">
+          <a class="nav-link menu" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu" href="about.html">About Us</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link menu" href="shop.html">Shop</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link menu" href="corporate.html">Corporate</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link  menu" href="contact.html">Contact</a>
+        </li>
+
+       
+      </ul>
+      
+    <div class="shopping-carts d-flex justify-content-center align-items-center" style="position: relative;">
+     <a href="#" class="s-text pt-1 " >Login</a> 
+      <span class="ps-2 pt-1 click-btn"><i class="bi bi-search s-search " id="click-search"></i></span>
+    
+      <a href="checkout.html">  <span class="ps-2" style="margin-top: px;"><i class="bi bi-cart4 s-icons"></i></span>
+    </a>
+
+
+
+    <div class="formss">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </div>
+    </div>
+    </div>
+  
+
+  </div>
+</nav>
+
+
+<!--======HEADER SECTION END=========-->
+<!--======CART SECTION START=========-->
+
+<section class="" style="z-index: 999999;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 pt-5 d-flex">
+        <p class="cart-heading ps-md-5 ps-sm-3 pt-3">Your Cart </p>
+          <div class="ps-4 main-carts pt-md-3" style="position: relative;">
+
+            <i class="bi bi-cart4" class="check-icon4" style="font-size: 70px; color:var(--bg-color)"></i>
+<img src="images/smallcircle.svg" class="check-icons" alt="" >
+<img src="images/36.png" class="check-icons2" alt="" width="30px" style="margin-top: -150px;">
+
+          </div>
+      </div>
+
+    
+     
+    </div>
+    </div>
+    <div class="container mt-md-3 mt-1" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 20px; background:rgb(255, 255, 255);
+    " >
+
+    <div class="row pt-sm-4 pt-2">
+      <div class="col-6">
+        <p class="text-sm-center cart-txt">PRODUCT</p>
+      </div>
+      <div class="col-3 ">
+        <p class="cart-txt ps-4">QTY</p>
+       
+      </div>
+      <div class="col-3">
+        <p class="cart-txt">PRICE</p>
+      </div>
+    </div>
+
+ 
+    <div class="row justify-content-center pt-sm-2 align-items-center">
+      <div class="col-6">
+        <div class="d-flex align-items-center">
+          <img src="images/Mask Group 2.png" class="img-fluid cartss-img" alt="">
+          <div class="ps-md-4 ps-sm-2 ps-2">
+            <p class="pt-3 carts-heading">Dracaena Compacta</p>
+            <p class="carts-para pt-md-0 pt-sm-2">CERAMIC POT Antique
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class=" col-3 ">
+       <!-- <p class="text-sm-center sar"> Quantity</p>  -->
+       <div class="number">
+        <span class="minus">-</span>
+        <input type="text" value="1"/>
+        <span class="plus">+</span>
+    </div>
+      </div>
+      <div class="col-2 d-flex justify-content-start">
+        <p class="sar "> <strong>SAR 138.00</strong>  
+        </p>
+      </div>
+      <div class="col-1 d-flex justify-content-center">
+      
+        <img src="images/bin.svg" class="img-fluid" width="15px" alt="">
+      </div>
+
+
+    </div>
+    <hr>
+    <div class="row justify-content-center pt-sm-2 align-items-center">
+      <div class="col-6">
+        <div class="d-flex align-items-center">
+          <img src="images/Mask Group 2.png" class="img-fluid cartss-img" alt="">
+          <div class="ps-md-4 ps-sm-2 ps-2">
+            <p class="pt-3 carts-heading">Dracaena Compacta</p>
+            <p class="carts-para pt-md-0 pt-sm-2">CERAMIC POT Antique
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class=" col-3 ">
+       <!-- <p class="text-sm-center sar"> Quantity</p>  -->
+       <div class="number">
+        <span class="minus">-</span>
+        <input type="text" value="1"/>
+        <span class="plus">+</span>
+    </div>
+      </div>
+      <div class="col-2 d-flex justify-content-start">
+        <p class="sar "> <strong>SAR 138.00</strong>  
+        </p>
+      </div>
+      <div class="col-1 d-flex justify-content-center">
+      
+        <img src="images/bin.svg" class="img-fluid" width="15px" alt="">
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="row px-4 pt-5 mt-4" style="background-color: #DEEFED; border-radius: 20px;">
+      <div class="col-md-7">
+        <div class="pt-3 d-flex align-items-center" style="margin-top: -20px;">
+  
+          <span><i class="fa-regular fa-circle-check p-icons" style="font-size:18px;"></i></span>
+          <img src="images/Gift.svg" width="19px" class="ms-2" alt="">
+         <p class="ps-3 pt-3">This order is a <strong>gift</strong> to someone</p> </span>
+        </span>
+        
+        </div>
+        <div class="mb-sm-5 mb-2">
+          <textarea class="form-control" placeholder="Add your message" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="col-md-5 pb-sm-4 pb-2">
+        <div class="d-flex  flex-column justify-content-md-end align-items-md-end">
+
+          <p style="color:var(--black-color); font-family: myFirstFont;">SUBTOTAL</p>
+          <p> <span class="carts-4"> SAR </span><span class="carts-text">225.</span> </p>
+          <p class="" style="font-size: 13px;">Tax included and shipping  <br>calculated at checkout.ax</p>
+          <a href="checkout.html" class="checks hero-btnss float-md-end text-sm-start text-center">Checkout</a>
+          <div class="d-flex mt-sm-3 mt-2">
+           
+            <div class="px-2 text-center align-items-center" style="background-color: var(--text-color); border-radius: 5px;">
+              <img src="images/icon1.1.png" width="25px" class="img-fluid py-1" alt="">
+            </div>
+            <div class="px-1 ms-2" style="background-color: var(--text-color); border-radius: 8px;">
+              <img src="images/icon1.2.png" width="45px" class="img-fluid" alt="">
+            </div>
+            <div class=" ms-2" style="background-color: var(--text-color); border-radius: 8px;">
+              <img src="images/icon1.3.png" width="45px" class="img-fluid" alt="">
+            </div>
+            <div class="px-1 ms-2" style="background-color: var(--text-color); border-radius: 8px;">
+              <img src="images/icon1.4.png" width="45px" class="img-fluid" alt="">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+ 
+</section>
+
+<div class="col-md-8 d-lg-block d-none" style="z-index: -9 !important;">
+  <img src="images/r1.png" class="csr1" alt="" >
+  <img src="images/r2.png" class="csr2" alt="">
+  <!-- <img src="images/r2.png" class="csr2" alt=""> -->
+</div>
+
+
+<!--======BEST SELLERS SHOP========-->
+<section class="best-seller pb-5 pt-md-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 ps-4">
+        <h2 class="main-seller-heading ps-sm-5">Want one More ?</h2>
+
+      </div>
+      <div class="col-lg-6  d-flex justify-content-end pb-3">
+ 
+
+          <img src="images/44.png" class=" img-fluid" width="65px" alt="" style="margin-top: 0px; position:absolute;">
+          <img src="images/smallcircle.svg" class=" img-fluid d-md-block d-none" width="70px" alt="" style="margin-top: 40px; position:absolute;">
+          <img src="images/smallcircle.svg" width="30px" class=" img-fluid d-md-block d-none" alt="" style="margin-top: 100px; position:absolute;">
+
+
+      </div>
+    </div>
+    <div class="row pt-4">
+    
+      <div class="col-lg-4 col-6  px-xxl-5 px-xl-2">
+        <a href="product.html">
+    
+        <div class="best-seller-boxsss d-flex justify-content-center">
+          <img src="images/cart1.png" class="img-fluid cart-1" alt="">
+        
+        </div>
+        <div class="about-f-iconss float-end px-2 py-1" >
+          <i class="bi bi-cart4 p-icon-cart"></i>
+        </div>
+        <p class="pt-3 seller-heading">Dracaena Compacta</p>
+        <p class="seller-para">CERAMIC POT WHITE TRIANGLE
+        </p>
+        <p class="seller-price">SAR 65.00</p>
+    
+        <img src="images/butterfly.png" class="butterfly" alt="">
+        <img src="images/smallcircle.svg" width="70px" class="butterfly" alt="">
+        <img src="images/smallcircle.svg" width="15px" class="butterfly d-lg-block d-none" alt="" style="position: absolute; margin-top: -210px; margin-left: -60px;">
+        <!-- <img src="images/smallcircle.svg" class=" img-fluid d-md-block d-none" width="60px" alt="" style="margin-top: 80px; position: absolute;"> -->
+
+      </a>
+    
+      </div>
+    
+    
+    
+      <div class="col-lg-4 col-6 px-xxl-5 px-xl-2" >
+        <a href="product.html">
+    
+        <div class="best-seller-boxsss d-flex justify-content-center">
+          <img src="images/cart2.png" class="img-fluid cart-2" alt="">
+        
+        </div>
+        <div class="about-f-iconss float-end px-2 py-1" >
+          <i class="bi bi-cart4 p-icon-cart"></i>
+        </div>
+        <p class="pt-3 seller-heading">Dracaena Compacta</p>
+        <p class="seller-para">CERAMIC POT WHITE TRIANGLE
+        </p>
+        <p class="seller-price">SAR 65.00</p>
+      </a>
+      </div>
+    
+    
+    
+      <div class="col-lg-4 col-6 px-xxl-5 px-lg-2">
+        <a href="product.html">
+    
+        <div class="best-seller-boxsss d-flex justify-content-center">
+          <img src="images/cart3.png" class="img-fluid cart-3" alt="">
+        
+        </div>
+        <div class="about-f-iconss float-end px-2 py-1" >
+          <i class="bi bi-cart4 p-icon-cart"></i>
+        </div>
+        <p class="pt-3 seller-heading">Dracaena Compacta</p>
+        <p class="seller-para">CERAMIC POT WHITE TRIANGLE
+        </p>
+        <p class="seller-price">SAR 65.00</p>
+    
+      </a>
+      </div>
+    
+    
+    
+    
+    
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center pt-3">
+        <a href="shop.html" class="hero-btn px-sm-5 px-3 py-3">More Plants ></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--======FOOTER TOP SECTION START=========-->
+<section class="footer-top" style="background-color: #01886251;">
+  <div class="container-fluid">
+    <div class="row p-3 justify-content-center align-items-center">
+      <div class="col-lg-3 col-md-6 fbox">
+        <div class="d-flex px-3 py-2 ">
+          <img src="images/aroow.png" class="img-fluid" alt="" style="height: 50px;">
+          <div class="d-flex flex-column ps-4">
+           
+           <p class="f-text" style="font-size: 22px;">Free Returns</p>
+           <p class="f-para">IF PRODUCTS ARE <br> DAMAGED</p>
+         
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fbox">
+        <div class="d-flex px-3 py-2 ">
+          <!-- <i class="fa-brands fa-whatsapp f-icons"></i> -->
+          <img src="images/clientcare.svg" alt="" style="height: 50px;">
+          <div class="d-flex flex-column ps-4">
+           
+           <p class="f-text" style="font-size: 22px;">Daily Support</p>
+           <p class="f-para">PROVIDED FOR OUR <br> VALUEABLE CUSTOMERS</p>
+         
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fbox">
+        <div class="d-flex px-3 py-2 ">
+          <img src="images/safety.svg" alt="" class="" style="height: 50px;">
+          <div class="d-flex flex-column ps-2">
+           
+           <p class="f-text" style="font-size: 22px;">100% Safe & Secure</p> <br>
+           <p class="f-para " style="margin-top: -40px;">PROVIDED FOR OUR <br> VALUEABLE CUSTOMERS</p>
+<!-- 
+           <p class="f-para">WE GUARANTEE THE SAFETY 
+             AND EASE OF RECEIVING YOUR 
+            ORDERS </p> -->
+         
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="d-flex px-3 py-2 ">
+          <img src="images/Path 211.png" class="img-fluid" alt="" style="height: 50px;">
+          <div class="d-flex flex-column ps-4">
+           
+           <p class="f-text" >Fast Delivery</p>
+           <p class="f-para">FAST AND SAFE DELIVERY WITHIN 2 BUSINESS DAYS</p>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!--======= FOOTER SECTION  ========= -->
+ <section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-6">
+       <img src="images/footer-logo.png" class="pt-4 ps-3 d-sm-none d-block" alt="">
+        <div class=" pt-5 ps-md-5 ps-sm-3 ps-2 pb-2 d-sm-block d-none ">
+
+          <img src="images/Group 210.png" alt="" class="img-fluid" width="200px">
+          <p class="footer-para pt-3">SHATLAT is an entirely new & unique online
+           experience, where customers can browse through and purchase an extensive range of indoor plants & pots.</p>
+           <div>
+             <span><i class="fa-brands fa-instagram footer-icons"></i></span>
+             <span class="ps-2"><i class="fa-brands fa-twitter footer-icons"></i></span>
+             <span class="ps-2"><i class="fa-brands fa-linkedin footer-icons"></i></span>
+           </div>
+        
+        <p class="f-mail pt-5 d-sm-block d-none">Copyright © 2023 Shatlat - Terms & Conditions - Privacy Policy</p>
+      </div>
+
+      </div>
+
+      <div class="col-lg-3 col-md-3 pt-md-5 pt-3">
+       <div class="d-flex flex-sm-column justify-content-between">
+
+         <li class="f-social">Find us</li>
+         
+         <p class="f-mail">Al Rahmaniyah, Takhassusi St. 
+           Riyadh, KSA</p>
+         </div>
+         
+      
+     
+    
+      </div>
+      <div class="col-lg-2 col-md-3 pt-md-5 pt-3">
+       <div class="d-flex flex-sm-column justify-content-between">
+
+       <li class="f-social">Call us</li>
+       <p class="f-mail">+966558976788</p>
+
+</div>
+       <ul class="pt-sm-4 pt-2 d-sm-block d-none">
+          <li class="nav-item f-nav"><a href="index.html" class="nav-link f-link" style="color:var(--text-color)">Home</a></li>
+          <li class="nav-item f-nav"><a href="about.html" class="nav-link f-link" style="color:var(--text-color)">About us</a></li>
+          <li class="nav-item f-nav"><a href="shop.html" class="nav-link f-link" style="color:var(--text-color)">Shop</a></li>
+          <li class="nav-item f-nav"><a href="#" class="nav-link f-link" style="color:var(--text-color)">Gifts</a></li>
+          
+         
+      
+        </ul>
+        
+      </div>
+      <div class="col-lg-2 col-md-3 pt-md-5 pt-3">
+       <div class="d-flex flex-sm-column justify-content-between">
+
+       <li class="f-social">Mail us</li>
+       <p class="f-mail">support@shatlat.sa</p>
+</div>
+       <ul class="pt-sm-4 pt-2 d-sm-block d-none">
+          <li class="nav-item f-nav"><a href="corporate.html" class="nav-link f-link" style="color:var(--text-color)">Corporate </a></li>
+          <li class="nav-item f-nav"><a href="contact.html" class="nav-link f-link" style="color:var(--text-color)">Contact </a></li>
+          <li class="nav-item f-nav"><a href="#" class="nav-link f-link" style="color:var(--text-color)">Login</a></li>
+          <li class="nav-item f-nav"><a href="cart.html" class="nav-link f-link" style="color:var(--text-color)">Cart</a></li>
+          
+         
+      
+        </ul>
+        <div class="d-flex flex-sm-column justify-content-between">
+
+          <p class="f-mailss pt-sm-5 d-sm-none d-block">Copyright © 2023 Shatlat - Terms & Conditions - Privacy Policy</p>
+          <div class="d-sm-none d-block">
+           <span><i class="fa-brands fa-instagram footer-icons"></i></span>
+           <span class="ps-2"><i class="fa-brands fa-twitter footer-icons"></i></span>
+           <span class="ps-2"><i class="fa-brands fa-linkedin footer-icons"></i></span>
+         </div>
+         </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!---===Vertical Lines on Page-->
+
+<!-- <div class="vl1"></div>
+<div class="vl2"></div>
+<div class="vl3"></div>
+<div class="vl4"></div>
+<div class="vl5"></div>
+<div class="vl6"></div>
+<div class="vl7"></div>
+<div class="vl8"></div>
+<div class="vl9"></div>
+<div class="vl10"></div>
+<div class="vl11"></div>
+<div class="vl12"></div>
+<div class="vl13"></div>
+<div class="vl14"></div>
+<div class="vl15"></div>
+<div class="vl16"></div>
+<div class="vl17"></div>
+<div class="vl18"></div>
+
+ -->
+
+<!--======AOS LIBRARY CDN=========-->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!--======Bootstrap Javascript CDN=========-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!--======Custom Javascript=========-->
+<script src="js/script.js"></script>
+</body>
+</html>
